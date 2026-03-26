@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad — Fitlab</title>
+  <style>
+    :root {
+      --bg: #0e0e0f;
+      --surface: #1a1a1c;
+      --border: #2a2a2d;
+      --accent: #a63018;
+      --accent-soft: rgba(166, 48, 24, 0.12);
+      --text: #e8e6e0;
+      --muted: #8a8880;
+      --mono: 'Courier New', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 17px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 48px 32px 40px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .logo-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .logo-mark {
+      width: 44px;
+      height: 44px;
+      background: var(--accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-mark svg {
+      width: 24px;
+      height: 24px;
+      fill: white;
+    }
+
+    .logo-name {
+      font-family: var(--mono);
+      font-size: 15px;
+      letter-spacing: 0.18em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: normal;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 32px 80px;
+    }
+
+    /* ── Intro box ── */
+    .intro {
+      background: var(--accent-soft);
+      border: 1px solid rgba(166, 48, 24, 0.25);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin: 48px 0 56px;
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 52px;
+    }
+
+    h2 {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-family: Georgia, serif;
+      font-size: 19px;
+      font-weight: normal;
+      color: var(--text);
+      margin: 28px 0 10px;
+    }
+
+    p {
+      color: #c8c6c0;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 14px;
+    }
+
+    ul li {
+      color: #c8c6c0;
+      padding: 5px 0 5px 22px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* ── Data table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 14px;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .data-table td {
+      padding: 12px 14px;
+      color: #c8c6c0;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .data-table td:first-child {
+      color: var(--text);
+      font-weight: normal;
+      white-space: nowrap;
+      width: 38%;
+    }
+
+    /* ── Contact box ── */
+    .contact-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px 28px;
+      margin-top: 20px;
+    }
+
+    .contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 14px;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Footer ── */
+    footer {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 32px 48px;
+      border-top: 1px solid var(--border);
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header, main, footer { padding-left: 20px; padding-right: 20px; }
+      .data-table td:first-child { white-space: normal; width: auto; }
+      .data-table th:last-child, .data-table td:last-child { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-row">
+    <div class="logo-mark">
+      <!-- Dumbbell icon -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.57 14.86L22 13.43 18.57 10l-1.43 1.43-1.43-1.43L17.14 8.57 15.71 7.14 14.29 8.57 12.86 7.14 14.29 5.71 12.86 4.29 9.43 7.71 5.71 4 4.29 5.43 8 9.14 4.29 12.86 5.71 14.29 7.14 12.86 8.57 14.29 7.14 15.71 8.57 17.14l1.43-1.43 1.43 1.43-1.43 1.43 1.43 1.43L14.29 22l1.43 1.43 3.43-3.43-1.43-1.43 1.43-1.43 1.43 1.43z"/>
+      </svg>
+    </div>
+    <span class="logo-name">Fitlab</span>
+  </div>
+
+  <h1>Política de<br>Privacidad</h1>
+  <p class="meta">Última actualización: marzo 2026 &nbsp;·&nbsp; Versión 1.0</p>
+</header>
+
+<main>
+
+  <div class="intro">
+    Esta política describe cómo la aplicación <strong>Fitlab</strong> recopila, usa y protege tu información personal. Está redactada de forma clara y directa. Si tienes alguna duda, escríbeme a la dirección indicada al final.
+  </div>
+
+  <!-- 1. Quién -->
+  <section>
+    <h2>01 &nbsp; Responsable</h2>
+    <p>
+      Fitlab es una aplicación desarrollada de forma independiente por un desarrollador individual (<em>indie developer</em>). No pertenece a ninguna empresa. Al usar la app aceptas las condiciones descritas en esta política.
+    </p>
+  </section>
+
+  <!-- 2. Qué recopilamos -->
+  <section>
+    <h2>02 &nbsp; Datos que recopilamos</h2>
+    <p>Recopilamos únicamente los datos necesarios para que la app funcione correctamente.</p>
+
+    <h3>Datos que tú proporcionas</h3>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Dato</th>
+          <th>Cuándo se recopila</th>
+          <th>Propósito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Correo electrónico</td>
+          <td>Al crear tu cuenta</td>
+          <td>Autenticación y recuperación de contraseña</td>
+        </tr>
+        <tr>
+          <td>Nombre y apellido</td>
+          <td>Al completar tu perfil</td>
+          <td>Personalización de la experiencia</td>
+        </tr>
+        <tr>
+          <td>Fecha de nacimiento</td>
+          <td>Al completar tu perfil</td>
+          <td>Perfil de usuario</td>
+        </tr>
+        <tr>
+          <td>Género y país</td>
+          <td>Al completar tu perfil</td>
+          <td>Perfil de usuario (opcional)</td>
+        </tr>
+        <tr>
+          <td>Número de teléfono</td>
+          <td>Al completar tu perfil</td>
+          <td>Perfil de usuario (opcional)</td>
+        </tr>
+        <tr>
+          <td>Foto de perfil</td>
+          <td>Al personalizar tu cuenta</td>
+          <td>Identificación visual (opcional)</td>
+        </tr>
+        <tr>
+          <td>Registros de entrenamiento</td>
+          <td>Al guardar sesiones</td>
+          <td>Historial y progreso personal</td>
+        </tr>
+        <tr>
+          <td>Ejercicios personalizados</td>
+          <td>Al crear ejercicios propios</td>
+          <td>Biblioteca personal</td>
+        </tr>
+        <tr>
+          <td>Medidas corporales</td>
+          <td>Al usar la herramienta de medidas</td>
+          <td>Seguimiento de progreso físico</td>
+        </tr>
+        <tr>
+          <td>Fotos de progreso</td>
+          <td>Al usar la galería</td>
+          <td>Registro visual personal (privado)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Datos recopilados automáticamente</h3>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Dato</th>
+          <th>Servicio</th>
+          <th>Propósito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Informes de fallos</td>
+          <td>Firebase Crashlytics</td>
+          <td>Detectar y corregir errores técnicos</td>
+        </tr>
+        <tr>
+          <td>Eventos de uso anónimos</td>
+          <td>Firebase Analytics</td>
+          <td>Entender cómo se usa la app y mejorarla</td>
+        </tr>
+        <tr>
+          <td>Identificador de dispositivo</td>
+          <td>Firebase</td>
+          <td>Vinculado a tu cuenta de usuario</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3. Cómo usamos -->
+  <section>
+    <h2>03 &nbsp; Cómo usamos tus datos</h2>
+    <p>Usamos tus datos exclusivamente para:</p>
+    <ul>
+      <li>Crear y gestionar tu cuenta de usuario</li>
+      <li>Guardar y sincronizar tus entrenamientos, ejercicios y medidas entre dispositivos</li>
+      <li>Mostrar tu historial y progreso dentro de la app</li>
+      <li>Detectar errores y mejorar la estabilidad de la aplicación</li>
+      <li>Entender qué funciones se usan más para priorizar mejoras</li>
+    </ul>
+    <p><strong>No vendemos, alquilamos ni compartimos tus datos personales con terceros para fines publicitarios.</strong></p>
+  </section>
+
+  <!-- 4. Dónde se almacenan -->
+  <section>
+    <h2>04 &nbsp; Almacenamiento y seguridad</h2>
+    <p>
+      Tus datos se almacenan en los servidores de <strong>Google Firebase</strong> (Firestore y Firebase Storage), protegidos por reglas de seguridad que garantizan que solo tú puedes leer y escribir tu propia información. Ningún otro usuario tiene acceso a tus datos.
+    </p>
+    <p>
+      Las fotos de progreso se guardan en primer lugar en tu dispositivo y opcionalmente se sincronizan con Firebase Storage bajo tu ID de usuario. Solo tú puedes acceder a ellas.
+    </p>
+    <p>
+      Los datos de analytics y fallos son procesados por Google de forma anonimizada, según la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color: var(--accent);">política de privacidad de Google</a>.
+    </p>
+  </section>
+
+  <!-- 5. Inicio de sesión social -->
+  <section>
+    <h2>05 &nbsp; Inicio de sesión con Google y Apple</h2>
+    <p>
+      Puedes iniciar sesión con tu cuenta de Google o Apple. En ese caso, recibiremos únicamente la información básica de perfil que autorices (nombre y correo). No recibimos contraseñas ni acceso a otros datos de tu cuenta de Google o Apple.
+    </p>
+    <p>
+      El inicio de sesión con Apple puede usar la opción de ocultar tu correo electrónico real, en cuyo caso Apple nos proporciona una dirección de reenvío anónima.
+    </p>
+  </section>
+
+  <!-- 6. Retención -->
+  <section>
+    <h2>06 &nbsp; Retención de datos</h2>
+    <p>
+      Conservamos tus datos mientras tengas una cuenta activa en Fitlab. Si eliminas tu cuenta desde la app (Ajustes → Zona de peligro → Eliminar cuenta), se borran:
+    </p>
+    <ul>
+      <li>Tu documento de perfil en Firestore</li>
+      <li>Tu cuenta de autenticación en Firebase</li>
+    </ul>
+    <p>
+      Los registros de entrenamiento, ejercicios, medidas y fotos almacenados en Firebase pueden tardar hasta 30 días adicionales en eliminarse completamente de los sistemas de respaldo de Google.
+    </p>
+  </section>
+
+  <!-- 7. Tus derechos -->
+  <section>
+    <h2>07 &nbsp; Tus derechos</h2>
+    <p>Tienes derecho a:</p>
+    <ul>
+      <li><strong>Acceder</strong> a todos tus datos directamente desde la app</li>
+      <li><strong>Corregir</strong> tus datos personales desde la pantalla de perfil</li>
+      <li><strong>Eliminar</strong> tu cuenta y todos tus datos desde Ajustes</li>
+      <li><strong>Portabilidad:</strong> puedes exportar tus registros de entrenamiento contactándome directamente</li>
+    </ul>
+    <p>
+      Para cualquier solicitud relacionada con tus datos, escríbeme al correo indicado abajo y responderé en un plazo máximo de 30 días.
+    </p>
+  </section>
+
+  <!-- 8. Menores -->
+  <section>
+    <h2>08 &nbsp; Menores de edad</h2>
+    <p>
+      Fitlab no está dirigida a personas menores de 13 años. No recopilamos conscientemente datos personales de menores de 13 años. Si eres padre o tutor y crees que un menor ha creado una cuenta, contáctame para eliminarla.
+    </p>
+  </section>
+
+  <!-- 9. Cambios -->
+  <section>
+    <h2>09 &nbsp; Cambios a esta política</h2>
+    <p>
+      Si realizamos cambios significativos a esta política, actualizaremos la fecha de "Última actualización" en la parte superior y, cuando sea relevante, te notificaremos dentro de la app. Te recomendamos revisar esta página periódicamente.
+    </p>
+  </section>
+
+  <!-- 10. Contacto -->
+  <section>
+    <h2>10 &nbsp; Contacto</h2>
+    <p>Si tienes preguntas sobre esta política o quieres ejercer alguno de tus derechos, puedes contactarme en:</p>
+    <div class="contact-box">
+      <p style="margin: 0; font-size: 15px; color: var(--muted); margin-bottom: 10px;">Correo electrónico</p>
+      <a href="mailto:privacidad@fitlab.app">privacidad@fitlab.app</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span>Fitlab &copy; 2026</span>
+  <span>Política de Privacidad &nbsp;v1.0</span>
+</footer>
+
+</body>
+</html>
